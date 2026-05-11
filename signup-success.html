@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>You're in! — RetroVault POS</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: #080809;
+  font-family: Inter, sans-serif;
+  background: #0a1018;
   color: #f2f2f7;
   min-height: 100vh;
   display: flex;
@@ -25,8 +25,8 @@ body::before {
   pointer-events: none;
 }
 .card {
-  background: #0f0f12;
-  border: 1px solid #1e1e28;
+  background: #111E2F;
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: 20px;
   padding: 48px;
   max-width: 520px;
@@ -37,8 +37,8 @@ body::before {
 }
 .check {
   width: 64px; height: 64px;
-  background: rgba(200,241,53,.1);
-  border: 2px solid rgba(200,241,53,.3);
+  background: rgba(248,101,6,.1);
+  border: 2px solid rgba(248,101,6,.3);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 28px;
@@ -47,14 +47,14 @@ body::before {
 }
 @keyframes pop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 32px; font-weight: 800;
   margin-bottom: 12px;
 }
-.sub { font-size: 15px; color: #6b6b82; line-height: 1.7; margin-bottom: 32px; }
+.sub { font-size: 15px; color: #6b8099; line-height: 1.7; margin-bottom: 32px; }
 .email-note {
-  background: #17171e;
-  border: 1px solid #2a2a38;
+  background: #16243a;
+  border: 1px solid rgba(255,255,255,0.13);
   border-radius: 10px;
   padding: 16px 20px;
   font-size: 13px;
@@ -74,51 +74,51 @@ h1 {
 .step {
   display: flex; align-items: flex-start; gap: 12px;
   padding: 12px 14px;
-  background: #17171e;
+  background: #16243a;
   border-radius: 8px;
   font-size: 13px;
 }
 .step-num {
   width: 22px; height: 22px;
-  background: rgba(200,241,53,.15);
+  background: rgba(248,101,6,.15);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; color: #c8f135;
+  font-size: 11px; font-weight: 700; color: var(--accent);
   flex-shrink: 0; margin-top: 1px;
 }
 .step-text strong { display: block; font-weight: 600; margin-bottom: 2px; }
-.step-text span { color: #6b6b82; font-size: 12px; }
+.step-text span { color: #6b8099; font-size: 12px; }
 .cta {
   display: block; width: 100%;
   padding: 14px;
-  background: #c8f135; color: #000;
+  background: #F86506; color: #fff;
   border: none; border-radius: 10px;
-  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700;
+  font-family: Inter, sans-serif; font-size: 15px; font-weight: 700;
   cursor: pointer; text-decoration: none;
   transition: opacity .2s;
   margin-bottom: 12px;
 }
 .cta:hover { opacity: .88; }
-.note { font-size: 12px; color: #6b6b82; }
+.note { font-size: 12px; color: #6b8099; }
 </style>
 </head>
 <body>
 <div class="card">
-  <div class="check">✓</div>
-  <h1>You're all set! 🎮</h1>
+  <div class="check"></div>
+  <h1>You're all set</h1>
   <p class="sub">Payment confirmed. Your account is being created right now — this usually takes about 30 seconds.</p>
 
   <div class="email-note">
     <strong>Watch your inbox</strong> for an email from <strong>billing@retrovaultpos.com</strong> — it contains your temporary password and a direct link to your dashboard.<br><br>
-    <span style="color:#6b6b82">⏱ Usually arrives within 1–2 minutes. If you don't see it, check your spam folder.</span>
+    <span style="color:#6b8099">⏱ Usually arrives within 1–2 minutes. If you don't see it, check your spam folder.</span>
   </div>
 
   <!-- Live status indicator -->
-  <div id="status-bar" style="background:#17171e;border:1px solid #2a2a38;border-radius:10px;padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px;text-align:left">
-    <div id="status-dot" style="width:10px;height:10px;border-radius:50%;background:#c8f135;flex-shrink:0;animation:pulse 1.5s ease infinite"></div>
+  <div id="status-bar" style="background:#16243a;border:1px solid rgba(255,255,255,0.13);border-radius:10px;padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px;text-align:left">
+    <div id="status-dot" style="width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pulse 1.5s ease infinite"></div>
     <div>
       <div id="status-text" style="font-size:13px;font-weight:600;color:#f2f2f7">Setting up your account...</div>
-      <div id="status-sub" style="font-size:11px;color:#6b6b82;margin-top:2px">Creating your store and sending login details</div>
+      <div id="status-sub" style="font-size:11px;color:#6b8099;margin-top:2px">Creating your store and sending login details</div>
     </div>
   </div>
   <style>
@@ -145,7 +145,7 @@ h1 {
       if (sub) sub.textContent = msg[2];
       if (secs >= 90) {
         var dot = document.getElementById('status-dot');
-        if (dot) dot.style.background = '#fbbf24';
+        if (dot) dot.style.background = '#f59e0b';
         clearInterval(interval);
       }
     }, 1000);
@@ -175,7 +175,7 @@ h1 {
     </div>
   </div>
 
-  <a href="index.html" class="cta">Open RetroVault →</a>
+  <a href="retrovault-dashboard.html" class="cta">Open RetroVault</a>
   <p class="note">Your 14-day free trial has started. No charge until day 15.</p>
 </div>
 </body>

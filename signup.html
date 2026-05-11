@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start your free trial — RetroVault POS</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #080809;
-  --bg2: #0f0f12;
-  --bg3: #17171e;
-  --border: #1e1e28;
-  --border2: #2a2a38;
+  --bg: #0a1018;
+  --bg2: #111E2F;
+  --bg3: #16243a;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
   --text: #f2f2f7;
-  --muted: #6b6b82;
-  --accent: #c8f135;
+  --muted: #6b8099;
+  --accent: #F86506;
   --red: #f87171;
   --teal: #14b8a6;
   --blue: #60a5fa;
@@ -24,7 +24,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: Inter, sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -32,7 +32,7 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-/* ── Left panel — value prop ── */
+/*  Left panel — value prop  */
 .left {
   background: var(--bg2);
   border-right: 1px solid var(--border);
@@ -46,12 +46,12 @@ body {
 }
 .logo {
   display: flex; align-items: center; gap: 10px;
-  font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800;
+  font-family: Inter, sans-serif; font-size: 18px; font-weight: 800;
   color: var(--text); margin-bottom: 48px;
 }
-.logo-dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
+.logo-dot { width: 10px; height: 10px; background: var(--orange); border-radius: 50%; }
 .left h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: Inter, sans-serif;
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 800; line-height: 1.1;
   margin-bottom: 16px;
@@ -71,13 +71,13 @@ body {
 .feature-text span { color: var(--muted); }
 .trial-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(200,241,53,.08); border: 1px solid rgba(200,241,53,.2);
+  background: rgba(248,101,6,.08); border: 1px solid rgba(248,101,6,.2);
   padding: 10px 16px; border-radius: 100px;
   font-size: 13px; font-weight: 600; color: var(--accent);
 }
-.trial-badge-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.trial-badge-dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; }
 
-/* ── Right panel — form ── */
+/*  Right panel — form  */
 .right {
   padding: 48px;
   display: flex; flex-direction: column;
@@ -90,7 +90,7 @@ body {
   text-transform: uppercase; letter-spacing: .6px; margin-bottom: 8px;
 }
 .right h2 {
-  font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800;
+  font-family: Inter, sans-serif; font-size: 26px; font-weight: 800;
   margin-bottom: 6px;
 }
 .right .sub { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
@@ -109,15 +109,15 @@ body {
 .plan-card:hover { border-color: var(--muted); }
 .plan-card.selected {
   border-color: var(--accent);
-  background: rgba(200,241,53,.06);
+  background: rgba(248,101,6,.06);
 }
 .plan-card input[type=radio] { position: absolute; opacity: 0; }
 .plan-name { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 4px; }
-.plan-price { font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 700; color: var(--text); }
+.plan-price { font-family: Inter, sans-serif; font-size: 20px; font-weight: 700; color: var(--text); }
 .plan-price sub { font-size: 11px; font-weight: 400; color: var(--muted); }
 .plan-badge {
   position: absolute; top: -9px; left: 50%; transform: translateX(-50%);
-  background: var(--accent); color: #000; font-size: 9px; font-weight: 800;
+  background: var(--accent); color: #fff; font-size: 9px; font-weight: 800;
   padding: 2px 8px; border-radius: 100px; white-space: nowrap;
   text-transform: uppercase; letter-spacing: .4px;
 }
@@ -132,18 +132,18 @@ body {
   width: 100%; padding: 11px 14px;
   background: var(--bg3); border: 1.5px solid var(--border2);
   border-radius: var(--r); color: var(--text); font-size: 14px;
-  font-family: 'DM Sans', sans-serif; outline: none;
+  font-family: Inter, sans-serif; outline: none;
   transition: border-color .2s;
 }
-.form-group input:focus { border-color: var(--accent); }
+.form-group input:focus { border-color: var(--accent); outline: none; }
 .form-group input::placeholder { color: var(--muted); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
 .submit-btn {
   width: 100%; padding: 14px;
-  background: var(--accent); color: #000;
+  background: var(--accent); color: #fff;
   border: none; border-radius: var(--r);
-  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700;
+  font-family: Inter, sans-serif; font-size: 15px; font-weight: 700;
   cursor: pointer; transition: opacity .2s, transform .2s;
   margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 8px;
 }
@@ -182,16 +182,15 @@ body {
 
 <!-- Left: value prop -->
 <div class="left">
-  <a href="index.html" class="logo" style="text-decoration:none">
-    <div class="logo-dot"></div>
-    RetroVault POS
+  <a href="retrovault-landing.html" style="text-decoration:none;font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#f0f4f8;letter-spacing:-0.5px;display:block;margin-bottom:48px">
+    RetroVault<span style="color:#F86506">.</span>
   </a>
   <h1>The POS built for <em>game stores</em></h1>
   <p>Market pricing, trade-in calculator, consignment tracking — everything your store needs, nothing it doesn't.</p>
 
   <div class="features">
     <div class="feature">
-      <div class="feature-icon">📡</div>
+      <div class="feature-icon" style="font-size:13px;font-weight:700;color:var(--accent)">--</div>
       <div class="feature-text">
         <strong>Live eBay market pricing</strong>
         <span>Know exactly what to offer on trade-ins. Updated nightly from real sold listings.</span>
@@ -205,7 +204,7 @@ body {
       </div>
     </div>
     <div class="feature">
-      <div class="feature-icon">📦</div>
+      <div class="feature-icon" style="font-size:13px;font-weight:700;color:var(--accent)">--</div>
       <div class="feature-text">
         <strong>Condition-aware inventory</strong>
         <span>Loose, CIB, sealed — tracked properly with SKUs, pricing, and cover art.</span>
@@ -298,10 +297,10 @@ body {
 
     <p class="fine-print">
       By signing up you agree to our <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.<br>
-      Requires internet connection.
+      Requires internet connection. <a href="retrovault-landing.html">Learn more about RetroVault</a>
     </p>
 
-    <p class="already">Already have an account? <a href="index.html">Sign in →</a></p>
+    <p class="already">Already have an account? <a href="retrovault-dashboard.html">Sign in</a></p>
   </div>
 </div>
 
@@ -340,7 +339,7 @@ async function startCheckout() {
   errBox.style.display = 'none';
 
   function showErr(msg) {
-    errBox.textContent = '⚠ ' + msg;
+    errBox.textContent = ' ' + msg;
     errBox.style.display = 'block';
     errBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
@@ -380,7 +379,7 @@ async function startCheckout() {
 
   } catch(e) {
     btn.disabled = false;
-    btn.textContent = 'Start free trial — 14 days free →';
+    btn.textContent = 'Start free trial — 14 days free';
     showErr(e.message);
   }
 }
