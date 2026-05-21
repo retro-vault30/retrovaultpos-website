@@ -8,6 +8,7 @@
 <meta name="description" content="RetroVault is a point of sale system built specifically for retro game stores, comic shops, and collectible retailers. Inventory, trade-ins, market pricing, and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -23,8 +24,6 @@ html{scroll-behavior:smooth}
   --r:6px;--rl:10px;
 }
 body{font-family:Inter,sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-
-/* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 6%;height:62px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-0.5px;text-decoration:none}
 .nav-logo span{color:var(--orange)}
@@ -40,8 +39,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .btn-orange-lg:hover{opacity:.88}
 .btn-outline-white{display:inline-flex;align-items:center;padding:13px 26px;font-size:15px;font-weight:600;border:1.5px solid rgba(255,255,255,0.3);border-radius:var(--r);background:transparent;color:#fff;cursor:pointer;text-decoration:none;font-family:Inter,sans-serif;transition:all .12s}
 .btn-outline-white:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.06)}
-
-/* HERO */
 .hero{background:var(--navy);padding:96px 6% 80px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 50% 0%,rgba(248,101,6,0.10) 0%,transparent 70%);pointer-events:none}
 .hero-tag{display:inline-block;background:rgba(248,101,6,0.14);border:1px solid rgba(248,101,6,0.28);border-radius:100px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--orange);letter-spacing:.3px;margin-bottom:28px}
@@ -50,13 +47,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .hero-sub{font-size:17px;color:rgba(255,255,255,0.55);max-width:500px;margin:0 auto 40px;line-height:1.65;font-weight:400}
 .hero-btns{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
 .hero-note{margin-top:16px;font-size:12px;color:rgba(255,255,255,.28)}
-
-/* WHAT IT IS */
 .tagline-bar{padding:48px 6%;text-align:center;border-bottom:1px solid var(--border)}
 .tagline-bar h2{font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--navy);letter-spacing:-0.5px;max-width:700px;margin:0 auto;line-height:1.4}
 .tagline-bar p{font-size:15px;color:var(--muted);max-width:560px;margin:12px auto 0;line-height:1.65}
-
-/* SECTION */
 .wrap{max-width:1080px;margin:0 auto}
 .section{padding:80px 6%}
 .section-alt{background:var(--bg);padding:80px 6%}
@@ -68,12 +61,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .lead-white{color:rgba(255,255,255,.5)}
 .tc{text-align:center}
 .mxauto{margin-left:auto;margin-right:auto}
-
-/* PLATFORMS */
 .platform-grid{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:32px}
 .platform-pill{padding:6px 14px;border:1px solid var(--border);border-radius:100px;font-size:12px;font-weight:600;color:var(--text);background:var(--white)}
-
-/* FEATURE GRID */
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 @media(max-width:768px){.feat-grid{grid-template-columns:1fr}}
 .feat-card{border:1px solid var(--border);border-radius:var(--rl);padding:26px;transition:border-color .12s,box-shadow .12s}
@@ -81,21 +70,15 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .feat-card h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:7px;letter-spacing:-0.2px}
 .feat-card p{font-size:13px;color:var(--muted);line-height:1.6}
 .feat-label{display:inline-block;font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
-
-/* TWO COL */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .two.rev{direction:rtl}
 .two.rev>*{direction:ltr}
 @media(max-width:768px){.two{grid-template-columns:1fr;gap:32px}.two.rev{direction:ltr}}
-
-/* CHECKLIST */
 .checks{display:flex;flex-direction:column;gap:14px;margin-top:28px}
 .check-item{display:flex;gap:12px;align-items:flex-start}
 .check-mark{width:20px;height:20px;border-radius:50%;background:rgba(248,101,6,0.12);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--orange);font-weight:800;flex-shrink:0;margin-top:2px}
 .check-item h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:3px;letter-spacing:-0.2px}
 .check-item p{font-size:13px;color:var(--muted);line-height:1.55}
-
-/* MOCK */
 .mock{background:var(--navy);border-radius:var(--rl);padding:16px;box-shadow:0 16px 48px rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.07)}
 .mock-bar{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(255,255,255,0.05);border-radius:6px;margin-bottom:12px}
 .m-logo{font-size:13px;font-weight:800;color:#fff;letter-spacing:-0.3px}
@@ -117,8 +100,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .m-badge{display:inline-block;padding:2px 7px;border-radius:100px;font-size:9px;font-weight:700}
 .m-badge.in{background:rgba(248,101,6,.18);color:var(--orange)}
 .m-badge.sold{background:rgba(255,255,255,.07);color:rgba(255,255,255,.4)}
-
-/* PRICE SHOWCASE */
 .price-showcase{background:var(--white);border:1px solid var(--border);border-radius:var(--rl);padding:24px}
 .price-row{background:var(--bg);border-radius:8px;padding:16px;margin-bottom:10px}
 .price-row:last-child{margin-bottom:0}
@@ -133,8 +114,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .price-cond-val{font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-0.5px}
 .price-note{font-size:11px;color:var(--muted);margin-top:14px;display:flex;align-items:center;gap:6px}
 .price-dot{width:7px;height:7px;border-radius:50%;background:var(--orange);flex-shrink:0}
-
-/* PRICING */
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:880px;margin:0 auto}
 @media(max-width:768px){.price-grid{grid-template-columns:1fr}}
 .pc{background:var(--white);border:1px solid var(--border);border-radius:var(--rl);padding:30px}
@@ -155,8 +134,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .pc-btn.outline:hover{border-color:var(--navy)}
 .pc-btn.fill{background:var(--orange);border:none;color:#fff}
 .pc-btn.fill:hover{opacity:.88}
-
-/* FOOTER */
 footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);padding:52px 6% 28px}
 .foot-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
 @media(max-width:768px){.foot-inner{grid-template-columns:1fr 1fr;gap:32px}}
@@ -173,7 +150,6 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
 </style>
 </head>
 <body>
-
 <nav>
   <a href="index.html" class="nav-logo">Retro<span>Vault</span></a>
   <ul class="nav-links">
@@ -186,29 +162,26 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     <a href="#pricing" class="btn-orange">Get started</a>
   </div>
 </nav>
-
 <section class="hero">
   <div class="hero-tag">Point of Sale for Game &amp; Collectible Stores</div>
   <h1>A POS Built for<br><span>Stores Like Yours</span></h1>
   <p class="hero-sub">RetroVault is a complete point of sale system designed for retro game stores, comic shops, and collectible retailers &mdash; not adapted from a restaurant or clothing POS.</p>
   <div class="hero-btns">
     <a href="#pricing" class="btn-orange-lg">Start free trial</a>
-    <a href="https://app.retrovaultpos.com" class="btn-outline-white">View demo</a>
+    <a href="#" onclick="openDemo(event)" class="btn-outline-white">Book a demo</a>
   </div>
   <p class="hero-note">14-day free trial &middot; No credit card required</p>
 </section>
-
 <div class="tagline-bar">
   <h2>Everything a specialty store needs &mdash; inventory, trade-ins, pricing, consignment, and more &mdash; in one system.</h2>
   <p>Generic POS software wasn't built for used and collectible inventory. RetroVault was.</p>
 </div>
-
 <div class="section-alt" id="platforms">
   <div class="wrap">
     <div class="tc" style="margin-bottom:32px">
       <div class="eyebrow">Game Catalog</div>
-      <div class="h2 mxauto" style="max-width:580px">101,200 titles across 33 platforms</div>
-      <p style="font-size:15px;color:var(--muted);margin-top:10px">Market pricing pulled hourly from eBay sold listings, updated automatically.</p>
+      <div class="h2 mxauto" style="max-width:580px">Over 100,000 titles across dozens of platforms</div>
+      <p style="font-size:15px;color:var(--muted);margin-top:10px">Market pricing from PriceCharting, refreshed daily.</p>
     </div>
     <div class="platform-grid">
       <div class="platform-pill">NES</div>
@@ -228,11 +201,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
       <div class="platform-pill">Sega Master System</div>
       <div class="platform-pill">Atari 2600</div>
       <div class="platform-pill">TurboGrafx-16</div>
-      <div class="platform-pill">+ 16 more</div>
+      <div class="platform-pill">+ many more</div>
     </div>
   </div>
 </div>
-
 <div class="section" id="features">
   <div class="wrap">
     <div class="tc" style="margin-bottom:44px">
@@ -288,7 +260,6 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     </div>
   </div>
 </div>
-
 <div class="section-alt">
   <div class="wrap">
     <div class="two">
@@ -355,14 +326,13 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     </div>
   </div>
 </div>
-
 <div class="section">
   <div class="wrap">
     <div class="two rev">
       <div>
         <div class="eyebrow">Market Pricing</div>
         <div class="h2">Know what every<br>game is worth</div>
-        <p class="lead">RetroVault scrapes eBay sold listings hourly and builds a real pricing database. Loose, CIB, and sealed prices for over 101,000 titles across 33 platforms.</p>
+        <p class="lead">RetroVault maintains a real pricing database powered by PriceCharting. Loose, CIB, and sealed prices across a catalog of over 100,000 titles.</p>
         <div class="checks">
           <div class="check-item">
             <div class="check-mark">&#10003;</div>
@@ -370,7 +340,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
           </div>
           <div class="check-item">
             <div class="check-mark">&#10003;</div>
-            <div><h4>Price history over time</h4><p>See how prices have moved. Spot trends across your catalog.</p></div>
+            <div><h4>Price history tracking</h4><p>Daily price snapshots build a history of how values move over time.</p></div>
           </div>
           <div class="check-item">
             <div class="check-mark">&#10003;</div>
@@ -422,13 +392,12 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
         </div>
         <div class="price-note">
           <div class="price-dot"></div>
-          Prices updated hourly from eBay sold listings
+          Prices refreshed daily from PriceCharting
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <div class="section" id="pricing">
   <div class="wrap">
     <div class="tc" style="margin-bottom:44px">
@@ -484,18 +453,16 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     </div>
   </div>
 </div>
-
 <div class="section-navy">
   <div style="max-width:540px;margin:0 auto;text-align:center">
     <div class="h2 h2-white" style="margin-bottom:14px">Ready to get started?</div>
     <p class="lead lead-white" style="margin:0 auto 32px">Try RetroVault free for 14 days. No credit card required.</p>
     <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
       <a href="signup.html" class="btn-orange-lg">Start free trial</a>
-      <a href="https://app.retrovaultpos.com" class="btn-outline-white">View demo</a>
+      <a href="#" onclick="openDemo(event)" class="btn-outline-white">Book a demo</a>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="foot-inner">
     <div>
@@ -507,7 +474,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
       <ul>
         <li><a href="#features">Features</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a href="https://app.retrovaultpos.com">Demo</a></li>
+        <li><a href="#" onclick="openDemo(event)">Book a demo</a></li>
       </ul>
     </div>
     <div class="foot-col">
@@ -533,6 +500,18 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     </div>
   </div>
 </footer>
-
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+function openDemo(e){
+  if(e){e.preventDefault();}
+  if(window.Calendly&&Calendly.initPopupWidget){
+    Calendly.initPopupWidget({url:'https://calendly.com/raymond-retrovaultpos/30min'});
+  } else {
+    // Fallback if the Calendly script hasn't loaded yet
+    window.open('https://calendly.com/raymond-retrovaultpos/30min','_blank');
+  }
+  return false;
+}
+</script>
 </body>
 </html>
